@@ -3,6 +3,7 @@ var backgroundColor="white";
 var eyePosX=65;
 var eyePosY=225;
 var eyeOffset=80;
+var hairDistance = dist(mouseX, mouseY, 155,155);
 
 function setup() {
   // put setup code here
@@ -46,7 +47,7 @@ noStroke();
   //head
   fill(102,204,0);
   ellipse(150,250,150,150);
-
+  
   //bun
   fill(0,0,0);
   ellipse(155,165,40,20);

@@ -406,7 +406,11 @@ if(firstBack==true && blink==false){
   textSize(12)
   textStyle("bold")
 text("Good night!", width/2-50, height/2-100);
-
+} else if (sunThere == true && moonThere== false){
+  fill("black");
+  textSize(12)
+  textStyle("bold")
+text("Too Bright!", width/2-50, height/2-100);
 }
 
 
