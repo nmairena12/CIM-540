@@ -73,7 +73,6 @@ for(var i = 0; i<ratAmount; i++){
   rat[i] = createSprite(500,800);
   rat[i].addAnimation('normal', '../imgs/lemmling-Simple-cartoon-mouse-1.png');
   rat[i].velocity.y = 3;
-  rat[i].setCollider('rectangle')
   rat[i].debug = "true";
   hunt.add(rat[i]);
 }
