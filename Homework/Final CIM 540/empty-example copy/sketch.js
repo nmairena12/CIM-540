@@ -147,12 +147,16 @@ function draw() {
   }
 
 
-  dodge.overlap(momCat, dodgeGroup);
+  if (momCat.overlap(dodge)){
+    console.log("dodge hit");
+    kittens.splice(i,1);
+  }
 
 
-  function dodgeGroup (kittens){
-    kittens.remove(i,1);
-  };
+  // function dodgeGroup (){
+  //   dodge.splice(i,1);
+  //   // kittens.splice(i,1);
+  // };
 
 
 // ACTION
