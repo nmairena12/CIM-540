@@ -152,6 +152,15 @@ function draw() {
     kittens.splice(i,1);
   }
 
+  dodge.displace(dodge);
+  dodge.displace(hunt);
+  dodge.displace(attack);
+  hunt.displace(hunt);
+  hunt.displace(attack);
+  hunt.displace(dodge);
+  attack.displace(attack);
+
+
 
   // function dodgeGroup (){
   //   dodge.splice(i,1);
