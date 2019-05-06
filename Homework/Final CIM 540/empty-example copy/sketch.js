@@ -150,7 +150,7 @@ function draw() {
   dodge.overlap(momCat, dodgeGroup);
 
 
-  function dodgeGroup (kittens, dodge){
+  function dodgeGroup (kittens){
     kittens.remove(i,1);
   };
 
