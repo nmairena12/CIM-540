@@ -163,7 +163,7 @@ function draw() {
   hunt.displace(dodge);
   attack.displace(attack);
 
-  setInterval()
+  // setInterval()
 
   if (momCat.overlap(hunt)){
     console.log("hunt hit")
