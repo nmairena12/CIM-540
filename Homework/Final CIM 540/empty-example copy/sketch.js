@@ -29,6 +29,9 @@ var kittens = [];
 var kittenAmount=5;
 
 var run = false;
+var prevTime= 0;
+var boost = 5000;
+
 
 
 function preload(){
@@ -148,7 +151,8 @@ function draw() {
 
   if (momCat.overlap(dodge)){
     console.log("dodge hit");
-    kittens.splice(i,1);
+    kittens.splice(i, 1);
+
   }
 
   dodge.displace(dodge);
@@ -159,6 +163,28 @@ function draw() {
   hunt.displace(dodge);
   attack.displace(attack);
 
+  if (momCat.overlap(hunt)){
+    console.log("hunt hit")
+    run = true;
+  }
+  for(run==true; millis()<5000;run==false){
+    if (keyIsDown(LEFT_ARROW)){
+      momCat.velocity.x = -20;
+    }
+    if (keyIsDown(RIGHT_ARROW)){
+      momCat.velocity.x = 20;
+    }
+    if(keyIsDown(UP_ARROW)){
+      momCat.velocity.y=-20;
+    }
+    if(keyIsDown(DOWN_ARROW)){
+      momCat.velocity.y=20;
+    }
+  }
+
+  if (momCat.overlap(attack)){
+
+  }
 
 
   // function dodgeGroup (){
@@ -195,5 +221,19 @@ function draw() {
 //
 // }
 
+// function catRun(){
+//   if (keyIsDown(LEFT_ARROW)){
+//     momCat.velocity.x = -20;
+//   }
+//   if (keyIsDown(RIGHT_ARROW)){
+//     momCat.velocity.x = 20;
+//   }
+//   if(keyIsDown(UP_ARROW)){
+//     momCat.velocity.y=-20;
+//   }
+//   if(keyIsDown(DOWN_ARROW)){
+//     momCat.velocity.y=20;
+//   }
+// }
  drawSprites();
 }
